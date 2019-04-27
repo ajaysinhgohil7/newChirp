@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>
+      Chirp
+    </title>
+    <script src="javscripts/angular.min.js"></script>
+    <script src="javscripts/chirpApp.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body ng-app="chirpApp">
+    <div id="main" class="container" ng-controller="authController">
+      <form class="form-auth" ng-submit="login()">
+        <h2>Login</h2>
+        <p class="text-warning">{{ error_message }}</p>
+        <input
+          type="username"
+          ng-model="user.username"
+          class="form-control"
+          placeholder="Username"
+        />
+        <input
+          type="password"
+          ng-model="user.password"
+          class="form-control"
+          placeholder="Password"
+        />
+        <input type="submit" value="Login" class="btn btn-primary" />
+      </form>
+    </div>
+  </body>
+</html>
